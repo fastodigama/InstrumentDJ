@@ -1,4 +1,4 @@
-name: Deploy static site with API Key
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -12,17 +12,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Create config.js with API Key
+      - name: Create scripts/config.js with API Key
         run: |
-          echo "const apiKey = '${{ secrets.APIKEY }}';" > scripts/config.js
-          echo "export default apiKey;" >> scripts/config.js
+          mkdir -p scripts
+          echo "export const apiKey = '${{ secrets.APIKEY }}';" > scripts/config.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
           publish_dir: .
