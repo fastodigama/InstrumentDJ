@@ -15,7 +15,8 @@ body{
     font-style: normal;
     min-height: 100vh;
     background-color:rgba(32, 131, 217, 0.666);
-    background-image: url("https://fastodigama.github.io/instrumentDJ/images/club.jpg");
+    background-image: url("../images/club.jpg");
+
 
 
 
@@ -109,7 +110,8 @@ body{
 
 .desk{
     
-    background-image: url("https://fastodigama.github.io/instrumentDJ/images/desk1.jpg");
+    background-image: url("../images/desk1.jpg");
+
 
 
 
