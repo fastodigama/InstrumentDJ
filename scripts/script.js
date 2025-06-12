@@ -4,9 +4,6 @@ import { apiKey } from './config.js';
 
 const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=Instrumental+rap&type=video&maxResults=10&videoEmbeddable=true&videoSyndicated=true&safeSearch=strict&videoDuration=short&key=${apiKey}`;
 
-console.log(apiKey);
-
-
   
 var playButton = document.getElementById("play-btn");
 var errorMsg = document.getElementById("error");
